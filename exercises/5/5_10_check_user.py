@@ -4,7 +4,7 @@ new_users=['zhou','JOHN','xiaomi','abb','GG']
 
 for user in users:
 	user_lower=user.lower
-	users_lower.append(user_lower)
+	users_lower.append(user_lower)#这里有问题，暂未解决
 print(users_lower)
 
 for new_user in new_users:
