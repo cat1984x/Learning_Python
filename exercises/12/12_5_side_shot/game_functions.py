@@ -5,12 +5,12 @@ from bullet import Bullet
 
 def check_keydown_events(event,ai_settings,screen,ship,bullets):
 	'''响应按键'''
-	if event.key == pygame.K_RIGHT:
-		#向右移动飞船
-		ship.moving_right = True
-	elif event.key == pygame.K_LEFT:
-		#向右移动飞船
-		ship.moving_left = True	
+	if event.key == pygame.K_DOWN:
+		#向下移动飞船
+		ship.moving_down = True
+	elif event.key == pygame.K_UP:
+		#向上移动飞船
+		ship.moving_up = True	
 	elif event.key == pygame.K_SPACE:
 		fire_bullet(ai_settings,screen,ship,bullets)
 		
@@ -23,12 +23,12 @@ def fire_bullet(ai_settings,screen,ship,bullets):
 
 def check_keyup_events(event,ship):
 	'''响应松开'''
-	if event.key == pygame.K_RIGHT:
-		#向右移动飞船
-		ship.moving_right = False			
-	if event.key == pygame.K_LEFT:
-		#向右移动飞船
-		ship.moving_left = False
+	if event.key == pygame.K_DOWN:
+		#向下移动飞船
+		ship.moving_down = False			
+	if event.key == pygame.K_UP:
+		#向上移动飞船
+		ship.moving_up = False
 
 
 def check_events(ai_settings,screen,ship,bullets):
@@ -66,6 +66,6 @@ def update_bullets(bullets):
 	
 	#删除已消失的子弹
 	for bullet in bullets.copy():
-		if bullet.rect.bottom <= 0:
+		if bullet.rect.left > bullet.screen_rect.right:
 			bullets.remove(bullet)
 		
