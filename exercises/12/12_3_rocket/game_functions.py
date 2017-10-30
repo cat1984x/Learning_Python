@@ -7,17 +7,29 @@ def check_keydown_events(event,ship):
 		#向右移动飞船
 		ship.moving_right = True
 	elif event.key == pygame.K_LEFT:
-		#向右移动飞船
-		ship.moving_left = True		
+		#向左移动飞船
+		ship.moving_left = True	
+	elif event.key == pygame.K_UP:
+		#向上移动飞船
+		ship.moving_up = True	
+	elif event.key == pygame.K_DOWN:
+		#向下移动飞船
+		ship.moving_down = True		
 
 def check_keyup_events(event,ship):
 	'''响应松开'''
 	if event.key == pygame.K_RIGHT:
 		#向右移动飞船
 		ship.moving_right = False			
-	if event.key == pygame.K_LEFT:
+	elif event.key == pygame.K_LEFT:
 		#向右移动飞船
 		ship.moving_left = False
+	elif event.key == pygame.K_UP:
+		#向右移动飞船
+		ship.moving_up = False
+	elif event.key == pygame.K_DOWN:
+		#向右移动飞船
+		ship.moving_down = False
 
 
 def check_events(ship):
