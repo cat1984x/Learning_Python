@@ -19,9 +19,9 @@ def run_game():
     #创建飞船
     ship = Ship(ai_settings,screen)  
     
-    #创建外星人
-    alien = Alien(screen,ai_settings)
-    
+    #创建外星人编组
+    aliens = Group()
+    gf.create_fleet(ai_settings,screen,aliens)   
     
     #创建存储子弹的编组
     bullets = Group()
@@ -31,7 +31,7 @@ def run_game():
         gf.check_events(ai_settings,screen,ship,bullets)
         ship.update()
         gf.update_bullets(bullets)      
-        gf.update_screen(ai_settings,screen,ship,bullets,alien)        
+        gf.update_screen(ai_settings,screen,ship,bullets,aliens)        
 
         
         
