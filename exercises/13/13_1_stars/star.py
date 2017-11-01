@@ -11,8 +11,8 @@ class Star(Sprite):
         self.screen_rect = self.screen.get_rect()
         
         #star 最初都在左上角
-        self.rect.x = self.image.width
-        self.rect.y = self.image.height
+        self.rect.x = self.rect.width
+        self.rect.y = self.rect.height
         
         
     def blitme(self):
