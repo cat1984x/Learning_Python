@@ -1,5 +1,6 @@
 class Settings():
 <<<<<<< HEAD
+<<<<<<< HEAD
     def __init__(self):     
         '''存储游戏所有设置的类'''
         
@@ -22,6 +23,8 @@ class Settings():
         self.bullet_color = 60,60,60
         self.bullet_allowed = 3
 =======
+=======
+>>>>>>> parent of 98eac30... 13
 	def __init__(self):		
 		'''存储游戏所有设置的类'''
 		
@@ -39,4 +42,7 @@ class Settings():
 		self.bullet_height = 15
 		self.bullet_color = 60,60,60
 		self.bullet_allowed = 3
+<<<<<<< HEAD
+>>>>>>> parent of 98eac30... 13
+=======
 >>>>>>> parent of 98eac30... 13

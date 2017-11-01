@@ -32,8 +32,11 @@ def run_game():
         ship.update()
         gf.update_bullets(bullets)      
 <<<<<<< HEAD
+<<<<<<< HEAD
         gf.update_screen(ai_settings,screen,ship,bullets,aliens)        
 =======
+=======
+>>>>>>> parent of 98eac30... 13
         gf.update_screen(ai_settings,screen,ship,bullets,aliens)         
 >>>>>>> parent of 98eac30... 13
         
