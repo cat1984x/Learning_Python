@@ -1,30 +1,30 @@
 import pygame
 from pygame.sprite import Sprite
 
-class Alien(Sprite):
-    '''表示单个外星人的类'''
+class Ball(Sprite):
+    '''表示单个龙珠的类'''
     def __init__(self, ai_settings,screen): #参数顺序要正确
-        '''初始化外星人并计算位置'''
-        super(Alien,self).__init__()
+        '''初始化龙珠并计算位置'''
+        super(Ball,self).__init__()
         self.screen = screen
         self.ai_settings = ai_settings
         
         self.screen_rect = self.screen.get_rect()
         
-        #加载外星人图像，并设置rect属性
+        #加载龙珠图像，并设置rect属性
         self.image = pygame.image.load('images/ball.jpg')
         self.rect = self.image.get_rect()
         
-        #每个外星人最初都在屏幕左上角附近
+        #每个龙珠最初都在屏幕左上角附近
         self.rect.x = self.rect.width
         self.rect.y = self.rect.height
         
-        #存储每个外星人准确位置
+        #存储每个龙珠准确位置
         self.x = float(self.rect.x)
         
 
     def blitme(self):
-        '''在指定位置绘制外星人'''
+        '''在指定位置绘制龙珠'''
         self.screen.blit(self.image,self.rect)        
    
     def update(self,ai_settings):
