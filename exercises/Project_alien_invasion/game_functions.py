@@ -109,3 +109,6 @@ def update_bullets(bullets):
         if bullet.rect.bottom <= 0:
             bullets.remove(bullet)
         
+def update_aliens(aliens):
+    '''更新外星人位置'''
+    aliens.update()
