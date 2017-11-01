@@ -13,8 +13,7 @@ class Settings():
         #外星人设置
         self.alien_speed_factor = 1
         
-        print(self.alien_speed_factor)
-        
+      
         #子弹设置
         self.bullet_speed_factor = 1
         self.bullet_width = 3

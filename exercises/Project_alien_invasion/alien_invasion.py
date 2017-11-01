@@ -21,7 +21,7 @@ def run_game():
     
     #创建外星人编组
     aliens = Group()
-    gf.create_fleet(ai_settings,screen,aliens)   
+    gf.create_fleet(ai_settings,screen,aliens) 
     
     #创建存储子弹的编组
     bullets = Group()
@@ -30,21 +30,7 @@ def run_game():
     while True:     
         gf.check_events(ai_settings,screen,ship,bullets)
         ship.update()
-<<<<<<< HEAD
-<<<<<<< HEAD
-        gf.update_bullets(bullets)
-        gf.update_aliens(aliens)   
-        gf.update_screen(ai_settings,screen,ship,bullets,aliens)         
-=======
-=======
->>>>>>> parent of 0b9fe6c... 13
         gf.update_bullets(bullets)      
         gf.update_screen(ai_settings,screen,ship,bullets,aliens)        
-
-        
-<<<<<<< HEAD
->>>>>>> parent of 0b9fe6c... 13
-=======
->>>>>>> parent of 0b9fe6c... 13
         
 run_game()
