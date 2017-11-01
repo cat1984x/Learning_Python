@@ -75,7 +75,6 @@ def create_fleet(ai_settings,screen,ship,aliens):
     number_alien_x = get_number_aliens_x(ai_settings,alien.rect.width)
     number_rows = get_number_rows(ai_settings,ship.rect.height,
         alien.rect.height)
-    print(number_rows)
     for row_number in range(number_rows):
         for alien_number in range(number_alien_x):
             create_alien(ai_settings,screen,aliens,alien_number,
@@ -108,4 +107,21 @@ def update_bullets(bullets):
     for bullet in bullets.copy():
         if bullet.rect.bottom <= 0:
             bullets.remove(bullet)
+  
+  
+def update_aliens(ai_settings,aliens):
+    '''更新外星人群中所有外星人位置'''
+    check_fleet_edge(ai_settings,aliens)
+    aliens.update()
+
+def check_fleet_edge(ai_settings,aliens):
+    for alien in aliens.sprites():
+        if alien.check_edges():
+            change_fleet_direction(ai_settings,aliens)
+            break
         
+def change_fleet_direction(ai_settings,aliens):
+    '''将舰队整体下移，并改变运动方向'''   
+    for alien in aliens.sprites():
+        alien.rect.y += ai_settings.fleet_drop_speed
+    ai_settings.fleet_direction *= -1
