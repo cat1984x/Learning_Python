@@ -34,7 +34,7 @@ class Scoreboard():
             
         self.score_rect = self.score_image.get_rect()
         self.score_rect.top = 20
-        self.score_rect.right = self.screen_rect.right - 20
+        self.score_rect.right = self.screen_rect.right - 100
         
         
     def prep_high_score(self):
