@@ -8,11 +8,11 @@ class Settings():
         self.bg_color = (230,230,230)   
         
         #飞船设置
-        self.ship_limit = 3
+        self.ship_limit = 2
         
         #子弹设置
-        self.bullet_width = 3000 #3
-        self.bullet_height = 15
+        self.bullet_width = 15
+        self.bullet_height = 3
         self.bullet_color = 60,60,60
         self.bullet_allowed = 3
         
@@ -24,6 +24,7 @@ class Settings():
         
         #加快游戏节奏
         self.speedup_scale = 1.1
+        
         #外星人点数的提高速度
         self.score_scale = 1.5
         
